@@ -1,0 +1,11 @@
+require 'rubygems'
+source 'https://rubygems.org'
+
+ruby '2.4.1'
+
+gem 'unsplash'
+gem 'open-uri'
+
+# gem 'sinatra'
+# gem 'thread'
+# gem 'chartkick'
