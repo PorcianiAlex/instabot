@@ -38,7 +38,7 @@ FOLLOW_MESSAGE = "Follow me @_foodhq for the best food photos!"
 # [random caption taken from PHOTO_CAPTIONS]
 # FOLLOW_MESSAGE
 
-NUMBER_OF_FOLLOWERS_TO_FOLLOW = 10
+NUMBER_OF_FOLLOWERS_TO_FOLLOW = 50
 # Specifies the number of people to follow each time the function
 # bot.follow_followers gets executed. By default, this function gets
 # executed by the bot every 2 days at 11:00.
