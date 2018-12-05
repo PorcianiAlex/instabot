@@ -70,7 +70,7 @@ class Bot(object):
                  filter_private_users=True,
                  filter_users_without_profile_photo=True,
                  filter_previously_followed=False,
-                 filter_business_accounts=True,
+                 filter_business_accounts=False,
                  filter_verified_accounts=True,
                  max_followers_to_follow=2000,
                  min_followers_to_follow=10,

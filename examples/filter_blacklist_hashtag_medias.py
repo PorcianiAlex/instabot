@@ -17,7 +17,7 @@ blacklist_hashtag_input = input("\n Enter a blacklist hashtag: ")
 bot = Bot(filter_users=True,
           filter_private_users=True,
           filter_previously_followed=True,
-          filter_business_accounts=True,
+          filter_business_accounts=False,
           filter_verified_accounts=True,
           blacklist_hashtags=[blacklist_hashtag_input],)
 bot.login()

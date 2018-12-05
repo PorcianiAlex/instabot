@@ -25,12 +25,14 @@ PICS_PATH = "./pics/"
 # The path of the directory containing the photos the bot will upload
 # NOTE: Being a directory, it must end with '/'
 
-PICS_HASHTAGS = ("#food")
+
+PICS_HASHTAGS = ("#food #elegant #dish")
 # The bot will comment each photo it posts with the hashtags in PICS_HASHTAGS
 # Each string but the last must end with a space
 # NOTE: Instagram allows only for a maximum of 30 hashtags per post.
 
 FOLLOW_MESSAGE = "Follow me @_foodhq for the best food photos!"
+
 # The string to insert under the random caption. The bot will construct each
 # photo caption like the following ->
 # [random caption taken from PHOTO_CAPTIONS]
