@@ -25,19 +25,18 @@ PICS_PATH = "./pics/"
 # The path of the directory containing the photos the bot will upload
 # NOTE: Being a directory, it must end with '/'
 
-PICS_HASHTAGS = ("#hashtag1 #hashtag2 #hashtag3 #hashtag4 "
-                 "#hashtag5 #hashtag6 #hashtag7")
+PICS_HASHTAGS = ("#food")
 # The bot will comment each photo it posts with the hashtags in PICS_HASHTAGS
 # Each string but the last must end with a space
 # NOTE: Instagram allows only for a maximum of 30 hashtags per post.
 
-FOLLOW_MESSAGE = "Follow @my_account for the best photos!"
+FOLLOW_MESSAGE = "Follow me @_foodhq for the best food photos!"
 # The string to insert under the random caption. The bot will construct each
 # photo caption like the following ->
 # [random caption taken from PHOTO_CAPTIONS]
 # FOLLOW_MESSAGE
 
-NUMBER_OF_FOLLOWERS_TO_FOLLOW = 15
+NUMBER_OF_FOLLOWERS_TO_FOLLOW = 10
 # Specifies the number of people to follow each time the function
 # bot.follow_followers gets executed. By default, this function gets
 # executed by the bot every 2 days at 11:00.

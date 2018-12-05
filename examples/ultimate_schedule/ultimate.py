@@ -117,17 +117,18 @@ def run_threaded(job_fn):
     job_thread = threading.Thread(target=job_fn)
     job_thread.start()
 
-schedule.every(5).hours.do(run_threaded, upload_pictures)
+# schedule.every(5).hours.do(run_threaded, upload_pictures)
+schedule.every(0.5).minutes.do(run_threaded, follow_users_from_hastag_file)
+
 schedule.every(1).hour.do(run_threaded, stats)
 schedule.every(8).hours.do(run_threaded, like_hashtags)
 schedule.every(2).hours.do(run_threaded, like_timeline)
 schedule.every(1).days.at("16:00").do(run_threaded, like_followers_from_random_user_file)
 schedule.every(2).days.at("11:00").do(run_threaded, follow_followers)
-schedule.every(16).hours.do(run_threaded, comment_medias)
+# schedule.every(16).hours.do(run_threaded, comment_medias)
 schedule.every(1).days.at("08:00").do(run_threaded, unfollow_non_followers)
-schedule.every(12).hours.do(run_threaded, follow_users_from_hastag_file)
-schedule.every(6).hours.do(run_threaded, comment_hashtag)
-schedule.every(1).days.at("21:28").do(run_threaded, upload_pictures)
+# schedule.every(6).hours.do(run_threaded, comment_hashtag)
+# schedule.every(1).days.at("21:28").do(run_threaded, upload_pictures)
 schedule.every(4).days.at("07:50").do(run_threaded, put_non_followers_on_blacklist)
 
 while True:

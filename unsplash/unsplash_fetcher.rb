@@ -13,12 +13,12 @@ end
 
 photo = Unsplash::Photo.find("tAKXap853rY")
 
-search_results = Unsplash::Photo.search("food")
+search_results = Unsplash::Photo.search("food", page=2, per_page=20)
 
 search_results.each do |photo|
   
   filename = photo.description + ", by " + photo.user.name
-
+  puts filename
   5.times do |i|
     filename += ' #' + photo.photo_tags[i]["title"]
   end
