@@ -119,21 +119,23 @@ def run_threaded(job_fn):
     job_thread.start()
 
 
-### DO IMMIDIATLY
+### DO IMMeDIATeLY
 bot.follow_users(bot.get_hashtag_users(random_hashtag_file.random()))
+unfollow_non_followers();
+like_hashtags()
 #print('following...')
 
 ### Like & Comment
 #
 #schedule.every(5).hours.do(run_threaded, upload_pictures)
-schedule.every(2).hours.do(run_threaded, like_hashtags)
-schedule.every(2).hours.do(run_threaded, like_timeline)
+schedule.every(1).hours.do(run_threaded, like_hashtags)
+schedule.every(8).hours.do(run_threaded, like_timeline)
 # schedule.every(3).hours.do(run_threaded, comment_hashtag)
 #schedule.every(12).hours.do(run_threaded, comment_medias)
 
 ### Follow & Unfollow
 # schedule.every(1).days.at("12:20").do(run_threaded, follow_users_from_hastag_file)
-schedule.every(2).hours.at("11:00").do(run_threaded, follow_users_from_hastag_file)
+schedule.every(2).days.at("11:00").do(run_threaded, follow_users_from_hastag_file)
 schedule.every(1).days.at("11:00").do(run_threaded, follow_users_from_hastag_file)
 schedule.every(1).days.at("15:00").do(run_threaded, follow_users_from_hastag_file)
 schedule.every(1).days.at("17:05").do(run_threaded, follow_users_from_hastag_file)
