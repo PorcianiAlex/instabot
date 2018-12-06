@@ -135,7 +135,7 @@ schedule.every(8).hours.do(run_threaded, like_timeline)
 
 ### Follow & Unfollow
 # schedule.every(1).days.at("12:20").do(run_threaded, follow_users_from_hastag_file)
-schedule.every(2).days.at("11:00").do(run_threaded, follow_users_from_hastag_file)
+# schedule.every(2).days.at("11:00").do(run_threaded, follow_users_from_hastag_file)
 schedule.every(1).days.at("11:00").do(run_threaded, follow_users_from_hastag_file)
 schedule.every(1).days.at("15:00").do(run_threaded, follow_users_from_hastag_file)
 schedule.every(1).days.at("17:05").do(run_threaded, follow_users_from_hastag_file)
