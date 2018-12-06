@@ -59,7 +59,7 @@ def unfollow_non_followers():
 
 def follow_users_from_hastag_file():
     bot.follow_users(bot.get_hashtag_users(random_hashtag_file.random()))
-
+    print(random_hashtag_file.random())
 
 def comment_hashtag():
     hashtag = random_hashtag_file.random()
@@ -120,10 +120,11 @@ def run_threaded(job_fn):
 
 
 ### DO IMMIDIATLY
-#bot.follow_users(bot.get_hashtag_users(random_hashtag_file.random()))
+bot.follow_users(bot.get_hashtag_users(random_hashtag_file.random()))
 #print('following...')
 
 ### Like & Comment
+#
 #schedule.every(5).hours.do(run_threaded, upload_pictures)
 schedule.every(2).hours.do(run_threaded, like_hashtags)
 schedule.every(2).hours.do(run_threaded, like_timeline)
@@ -132,7 +133,10 @@ schedule.every(2).hours.do(run_threaded, like_timeline)
 
 ### Follow & Unfollow
 # schedule.every(1).days.at("12:20").do(run_threaded, follow_users_from_hastag_file)
-schedule.every(2).hours.do(run_threaded, follow_users_from_hastag_file)
+schedule.every(2).hours.at("11:00").do(run_threaded, follow_users_from_hastag_file)
+schedule.every(1).days.at("11:00").do(run_threaded, follow_users_from_hastag_file)
+schedule.every(1).days.at("15:00").do(run_threaded, follow_users_from_hastag_file)
+schedule.every(1).days.at("17:05").do(run_threaded, follow_users_from_hastag_file)
 schedule.every(1).days.at("11:00").do(run_threaded, follow_followers)
 schedule.every(3).days.at("08:00").do(run_threaded, unfollow_non_followers)
 #schedule.every(4).days.at("07:50").do(run_threaded, put_non_followers_on_blacklist)
