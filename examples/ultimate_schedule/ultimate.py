@@ -120,9 +120,9 @@ def run_threaded(job_fn):
 
 
 ### DO IMMeDIATeLY
-bot.follow_users(bot.get_hashtag_users(random_hashtag_file.random()))
-unfollow_non_followers();
+unfollow_non_followers()
 like_hashtags()
+bot.follow_users(bot.get_hashtag_users(random_hashtag_file.random()))
 #print('following...')
 
 ### Like & Comment
